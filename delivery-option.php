@@ -333,30 +333,36 @@ function lf_filter_producer_available($purchasable, $product)
 function lf_filter_query_producer_available($meta_query, $wc_query)
 {
     $args = array(
-        'post_type' => array('producer'),
+        'post_type' => array('food_actor'),
         'post_status' => 'publish',
         'posts_per_page' => -1,
     );
     $producers_list = get_posts($args);
+
     if ($producers_list != null && is_array($producers_list)) {
         $available_producers = array();
+        $available_producers[] = -1;
         foreach ($producers_list as $producer) {
             $days_available = get_post_meta($producer->ID, "producer_days_available");
             $opts_available = get_post_meta($producer->ID, "producer_opts_available");
             if ($days_available != null && $days_available[0] != null
                 && $opts_available != null && $opts_available[0] != null
             ) {
+                echo get_day_of_week(lf_get_delivery_date());
+                echo "<hr/>";
+                echo lf_get_delivery_option();
+                echo "<hr/>";
                 if (in_array(get_day_of_week(lf_get_delivery_date()), $days_available[0])
                     && in_array(lf_get_delivery_option(), $opts_available[0])
                 ) {
-                    $terms = wp_get_post_terms($producer->ID, "producer_id");
-                    $available_producers[] = $terms[0]->slug;
+                    $available_producers[] = $producer->ID;
                 }
 
             }
 
         }
-        $meta_query[] = array(
+
+        $meta_query['available'] = array(
             'key' => 'food_product_produced_by',
             'value' => $available_producers,
             'compare' => 'IN'

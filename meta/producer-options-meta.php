@@ -31,8 +31,8 @@ function lf_metabox_producer()
 
     $cmb = new_cmb2_box(array(
         'id' => $prefix . 'producer_opt',
-        'title' => __('Producer Options', 'linkedfarm'),
-        'object_types' => array('producer'),
+        'title' => __('Actor Options', 'linkedfarm'),
+        'object_types' => array('food_actor'),
         'context' => 'normal',
         'priority' => 'high',
     ));
