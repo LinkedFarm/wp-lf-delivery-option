@@ -26,7 +26,7 @@ function init()
 
     add_filter('woocommerce_is_purchasable', 'LinkedFarm\DeliveryOption\Main\lf_filter_producer_available', 10, 2);
     //add_filter( 'woocommerce_product_is_visible', 'lf_filter_producer_available_product_visible',10, 2  );
-    add_filter('woocommerce_product_query_tax_query',
+    add_filter('woocommerce_product_query_meta_query',
         'LinkedFarm\DeliveryOption\Main\lf_filter_query_producer_available', 10, 2);
     add_action('wp_ajax_nopriv_lf_set_deliveryDate', 'LinkedFarm\DeliveryOption\Main\lf_change_ddate');
     add_action('wp_ajax_lf_set_deliveryDate', 'LinkedFarm\DeliveryOption\Main\lf_change_ddate');
@@ -296,23 +296,12 @@ function get_day_of_week($date)
 
 function is_product_available($product_id)
 {
-    $terms = wp_get_post_terms($product_id, "producer_id");
-    $args = array(
-        'post_type' => array('producer'),
-        'post_status' => 'publish',
-        'posts_per_page' => -1,
-        'tax_query' => array(
-            array(
-                'taxonomy' => 'producer_id',
-                'field' => 'slug',
-                'terms' => $terms[0]->slug
-            )
-        )
-    );
-    $producers_list = get_posts($args);
-    if ($producers_list != null && $producers_list[0] != null) {
-        $days_available = get_post_meta($producers_list[0]->ID, "producer_days_available");
-        $opts_available = get_post_meta($producers_list[0]->ID, "producer_opts_available");
+
+    $producer_id = get_post_meta($product_id, "food_product_produced_by");
+
+    if ($producer_id != null) {
+        $days_available = get_post_meta($producer_id, "producer_days_available");
+        $opts_available = get_post_meta($producer_id, "producer_opts_available");
         if ($days_available != null && $days_available[0] != null && $opts_available != null &&
             $opts_available[0] != null
         ) {
@@ -324,6 +313,7 @@ function is_product_available($product_id)
 
     return false;
 }
+
 
 function lf_filter_producer_available($purchasable, $product)
 {
@@ -340,7 +330,7 @@ function lf_filter_producer_available($purchasable, $product)
 //    return $visible;
 //}
 
-function lf_filter_query_producer_available($tax_query, $wc_query)
+function lf_filter_query_producer_available($meta_query, $wc_query)
 {
     $args = array(
         'post_type' => array('producer'),
@@ -366,16 +356,13 @@ function lf_filter_query_producer_available($tax_query, $wc_query)
             }
 
         }
-        $tax_query[] = array(
-            'taxonomy' => 'producer_id',
-            'field' => 'slug',
-            'terms' => $available_producers,
-            'operator' => 'IN',
-            'include_children' => false,
+        $meta_query[] = array(
+            'key' => 'food_product_produced_by',
+            'value' => $available_producers,
+            'compare' => 'IN'
         );
     }
-
-    return $tax_query;
+    return $meta_query;
 }
 
 

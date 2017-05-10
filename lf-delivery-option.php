@@ -32,7 +32,7 @@ if (!defined('ABSPATH'))
 
 if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 
-    if ( ! file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+    if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
         require_once(__DIR__ . '/vendor/autoload.php');
     }
 
