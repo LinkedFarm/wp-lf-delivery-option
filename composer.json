@@ -1,0 +1,41 @@
+{
+  "name": "linkedfarm/wp-lf-delivery-option",
+  "type": "wordpress-plugin",
+  "description": "Linked Farm Delivery Option extension plugin for lf-hub-wc",
+  "license": "GPL-3.0+",
+  "authors": [
+    {
+      "name": "Kalin Maldzhanski",
+      "email": "k@djodjo.org",
+      "homepage": "http://djodjo.org",
+      "role": "Developer"
+    }
+  ],
+  "keywords": ["wordpress", "plugin", "LinkedFarm", "OpenFoodData", "FoodActor"],
+  "homepage": "https://linkedfarm.github.io/wp-lf-delivery-option",
+  "support": {
+    "issues": "https://github.com/LinkedFarm/wp-lf-delivery-option/issues",
+    "docs": "https://linkedfarm.github.io/wp-lf-delivery-option",
+    "source": "http://wordpress.org/support/plugin/wp-lf-delivery-option"
+  },
+  "require": {
+    "php": ">=5.3.0",
+    "composer/installers": "v1.3.0",
+    "linkedfarm/wp-lf-core": "dev-master"
+  },
+  "suggest": {
+    "composer/installers": "~1.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "3.7.*"
+  },
+  "autoload": {
+    "files": ["vendor/wp-lf-core/lf-core.php"]
+  },
+  "extra": {
+    "installer-paths": {
+      "vendor/wp-lf-core/": ["linkedfarm/wp-lf-core"]
+    }
+  },
+  "minimum-stability": "dev"
+}

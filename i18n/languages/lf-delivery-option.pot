@@ -1,0 +1,296 @@
+# Loco Gettext template
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: lf-delivery-option 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-13 17:56+0200\n"
+"POT-Revision-Date: Tue May 09 2017 12:07:25 GMT+0200 (CEST)\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ../..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: ../../lf-general.php:35
+msgid "Settings Saved"
+msgstr ""
+
+#: ../../meta/producer-options-meta.php:34
+msgid "Producer Options"
+msgstr ""
+
+#: ../../meta/producer-options-meta.php:43
+msgid "Available Days"
+msgstr ""
+
+#: ../../meta/producer-options-meta.php:48
+msgid "Mon"
+msgstr ""
+
+#: ../../meta/producer-options-meta.php:49
+msgid "Tue"
+msgstr ""
+
+#: ../../meta/producer-options-meta.php:50
+msgid "Wed"
+msgstr ""
+
+#: ../../meta/producer-options-meta.php:51
+msgid "Thu"
+msgstr ""
+
+#: ../../meta/producer-options-meta.php:52
+msgid "Fri"
+msgstr ""
+
+#: ../../meta/producer-options-meta.php:53
+msgid "Sat"
+msgstr ""
+
+#: ../../meta/producer-options-meta.php:54
+msgid "Sun"
+msgstr ""
+
+#: ../../meta/producer-options-meta.php:69
+msgid "Available Options"
+msgstr ""
+
+msgid "Delivery Option"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://linkedfarm.github.io/wp-plugin/Delivery Option"
+msgstr ""
+
+#. Author of the plugin
+msgid "Linked.Farm"
+msgstr ""
+
+#: ../../common.php:7
+msgid "Monday"
+msgstr ""
+
+#: ../../common.php:8
+msgid "Tuesday"
+msgstr ""
+
+#: ../../common.php:9
+msgid "Wednesday"
+msgstr ""
+
+#: ../../common.php:10
+msgid "Thursday"
+msgstr ""
+
+#: ../../common.php:11
+msgid "Friday"
+msgstr ""
+
+#: ../../common.php:12
+msgid "Saturday"
+msgstr ""
+
+#: ../../common.php:13
+msgid "Sunday"
+msgstr ""
+
+#: ../../delivery-option.php:87 ../../delivery-option.php:108 ../../delivery-
+#: option-ui.php:33 ../../delivery-option-ui.php:47 ../../delivery-option-ui.php:
+#: 246
+msgid "Delivery Date"
+msgstr ""
+
+#: ../../delivery-option.php:103 ../../delivery-option.php:108
+msgid "is required"
+msgstr ""
+
+#: ../../delivery-option-settings.php:56
+msgid "Main Settings"
+msgstr ""
+
+#: ../../delivery-option-settings.php:58
+msgid "UI Settings"
+msgstr ""
+
+#: ../../delivery-option-settings.php:66 ../../delivery-option-settings.php:74
+msgid "Save Settings"
+msgstr ""
+
+#: ../../delivery-option-settings.php:85
+msgid "Delivery Option UI Setings"
+msgstr ""
+
+#: ../../delivery-option-settings.php:95
+msgid "Calendar Language:"
+msgstr ""
+
+#: ../../delivery-option-settings.php:99
+msgid "Choose a Language."
+msgstr ""
+
+#: ../../delivery-option-settings.php:109
+msgid "Date Format:"
+msgstr ""
+
+#: ../../delivery-option-settings.php:113
+msgid ""
+"The format in which the Delivery Date appears to the customers on the "
+"checkout page once the date is selected."
+msgstr ""
+
+#: ../../delivery-option-settings.php:123
+msgid "First Day of Week:"
+msgstr ""
+
+#: ../../delivery-option-settings.php:127
+msgid "Choose the first day of week displayed on the Delivery Date calendar."
+msgstr ""
+
+#: ../../delivery-option-settings.php:138
+msgid "Field Note Text:"
+msgstr ""
+
+#: ../../delivery-option-settings.php:142
+msgid ""
+"Choose the note to be displayed below the delivery date field on checkout "
+"page."
+msgstr ""
+
+#: ../../delivery-option-settings.php:153
+msgid "Number of Months:"
+msgstr ""
+
+#: ../../delivery-option-settings.php:157
+msgid "The number of months to be shown on the calendar."
+msgstr ""
+
+#: ../../delivery-option-settings.php:167
+msgid "Field placement on the Checkout page:"
+msgstr ""
+
+#: ../../delivery-option-settings.php:171
+msgid ""
+"</br>The Delivery Date field will be displayed in the selected section."
+"</br><i>Note: WooCommerce automatically hides the Shipping section fields "
+"for Virtual products.</i>"
+msgstr ""
+
+#: ../../delivery-option-settings.php:181
+msgid "Theme:"
+msgstr ""
+
+#: ../../delivery-option-settings.php:185
+msgid ""
+"Select the theme for the calendar which blends with the design of your "
+"website."
+msgstr ""
+
+#: ../../delivery-option-settings.php:317
+msgid "In Billing Section"
+msgstr ""
+
+#: ../../delivery-option-settings.php:318
+msgid "In Shipping Section"
+msgstr ""
+
+#: ../../delivery-option-settings.php:319
+msgid "Before Order Notes"
+msgstr ""
+
+#: ../../delivery-option-settings.php:320
+msgid "After Order Notes"
+msgstr ""
+
+#: ../../delivery-option-settings.php:370
+msgid "Preview theme:"
+msgstr ""
+
+#: ../../delivery-option-settings.php:381
+msgid "Delivery Option Main Setings"
+msgstr ""
+
+#: ../../delivery-option-settings.php:390
+msgid "Number of delivery options:"
+msgstr ""
+
+#: ../../delivery-option-settings.php:394
+msgid "Number of available delivery or pickup options."
+msgstr ""
+
+#: ../../delivery-option-settings.php:406
+msgid "Number of options to choose:"
+msgstr ""
+
+#: ../../delivery-option-settings.php:410
+msgid "Info of available delivery or pickup options."
+msgstr ""
+
+#: ../../delivery-option-settings.php:423
+msgid "Available Days:"
+msgstr ""
+
+#: ../../delivery-option-settings.php:427
+msgid "Select available days for delivery."
+msgstr ""
+
+#: ../../delivery-option-settings.php:442
+msgid "Minimum Delivery time (in hours):"
+msgstr ""
+
+#: ../../delivery-option-settings.php:446
+msgid "Minimum number of hours required to prepare for delivery."
+msgstr ""
+
+#: ../../delivery-option-settings.php:456
+msgid "Number of dates to choose:"
+msgstr ""
+
+#: ../../delivery-option-settings.php:460
+msgid "Number of dates available for delivery."
+msgstr ""
+
+#: ../../delivery-option-settings.php:479
+msgid "Delivery Options:"
+msgstr ""
+
+#: ../../delivery-option-settings.php:488
+msgid "Option"
+msgstr ""
+
+#: ../../delivery-option-ui.php:100
+msgid "The shop is currently closed."
+msgstr ""
+
+#: ../../delivery-option-ui.php:109
+msgid "Clear"
+msgstr ""
+
+#: ../../delivery-option-ui.php:237
+msgid "Choose Option"
+msgstr ""
+
+#: ../../delivery-option-ui.php:247
+msgid "Choose Date"
+msgstr ""
+
+msgid "Home Delivery"
+msgstr ""
+
+msgid "Delivery at Hof van Piemont"
+msgstr ""
+
+msgid "Delivery at Asse train station"
+msgstr ""
